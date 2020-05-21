@@ -318,7 +318,7 @@ def rf101(num_classes, pretrained=True, gpu_ids=[], use_dropout=False, **kwargs)
         
     model.apply(weights_init)
     if pretrained:
-        trained_model = "/mnt/hdd3/pytorch-hand/model/refinenet101_voc.pth.tar"
+        trained_model = "model/refinenet101_voc.pth.tar"
         pretrained_dict = torch.load(trained_model)   
         model_dict = model.state_dict()
         #print(pretrained_dict.keys())
