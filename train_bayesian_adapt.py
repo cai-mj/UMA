@@ -377,7 +377,7 @@ def checkpoint(epoch):
     torch.save(netG, net_g_model_out_path)
     print("Checkpoint saved to {}".format("checkpoint" + opt.dataset))
 
-save_path = '/mnt/hdd3/pytorch-hand/save'   # you can change to your own save path
+save_path = 'save'   # you can change to your own save path
 if not os.path.exists(save_path):
     os.makedirs(save_path)
 
@@ -430,6 +430,7 @@ def train_val_update():
     
 def main(argv):
     """
+    An example command of running this file: python train_bayesian_adapt.py --dataset Yale_Human_Grasp --batchSize 12
     """
     train_val_update()
     
