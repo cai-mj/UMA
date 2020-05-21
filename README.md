@@ -5,15 +5,19 @@ Uncertainty-Guided Model Adaptation" by Minjie Cai, Feng Lu and Yoichi Sato.
 
 Currently, the code is under update.
 
-## Requirements
-The code is tested to work correctly with:
+## Code usage
 
+### Requirements
+The code is tested to work correctly with:
 - GPU environment
 - Anaconda Python 3.7
 - [Pytorch](https://pytorch.org/) v0.4.0
 - NumPy
 - OpenCV
 - tqdm
+
+### Dataset preparation
+We use several different datasets for model adaptation (or domain adaptation), including: EGTEA, GTEA, EDSH2, EDSH-Kitchen, UTG, YHG, and EgoHands. The UTG and Yale_Human_Grasp datasets are prepared by the paper and included in the repository. Other datasets are public and please download by yourself and arrange them in filefolders like UTG.
 
 ### Running the code
 To run the complete experiment, after preparing the data, run
