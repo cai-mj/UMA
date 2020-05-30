@@ -9,18 +9,20 @@ Currently, the code is under update.
 
 ### Requirements
 The code is tested to work correctly with:
+- Ubuntu 18.04
 - GPU environment
 - Anaconda Python 3.7
 - [Pytorch](https://pytorch.org/) v0.4.0
 - NumPy
 - OpenCV
 - tqdm
+It may also work with other versions of Ubuntu, Python 3 and Pytorch, but we haven't checked.
 
 ### Dataset preparation
 We use several different datasets for model adaptation (or domain adaptation), including: EGTEA, GTEA, EDSH2, EDSH-Kitchen, UTG, YHG, and EgoHands. The UTG and Yale_Human_Grasp datasets are prepared by the paper and included in the repository. Other datasets are public and please download by yourself and arrange them in filefolders like UTG.
 
 ### Pre-trained model
-You can download the hand segmentation model (bayes_rf101_egtea_00040.pth.tar) pre-trained on EGTEA dataset from [BaiduDrive](https://pan.baidu.com/s/1DNFK_kFZc_Z0nQhOliCK0w) code: rvch
+You can download the hand segmentation model (bayes_rf101_egtea_00040.pth.tar) pre-trained on EGTEA dataset from [BaiduDrive](https://pan.baidu.com/s/1DNFK_kFZc_Z0nQhOliCK0w) code: rvch  
 Please put the model inside the filefolder according to the filepath of the code.
 
 ### Running the code
