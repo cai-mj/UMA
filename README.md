@@ -15,7 +15,7 @@ The code is tested to work correctly with:
 - [Pytorch](https://pytorch.org/) v0.4.0
 - NumPy
 - OpenCV
-- tqdm
+- tqdm  
 It may also work with other versions of Ubuntu, Python 3 and Pytorch, but we haven't checked.
 
 ### Dataset preparation
