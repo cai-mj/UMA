@@ -16,6 +16,7 @@ The code is tested to work correctly with:
 - NumPy
 - OpenCV
 - tqdm  
+
 It may also work with other versions of Ubuntu, Python 3 and Pytorch, but we haven't checked.
 
 ### Dataset preparation
