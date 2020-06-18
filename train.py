@@ -165,7 +165,7 @@ if opt.cuda:
         
 resume_G = False
 if resume_G:
-    trained_model = "/mnt/hdd3/pytorch-hand/save/bayes_rf101_egtea_00040.pth.tar"
+    trained_model = "save/bayes_rf101_egtea_00040.pth.tar"
     #trained_model = "model/00050_netG_egtea.pth.tar"
     pretrained_dict = torch.load(trained_model)
     pretrained_dict = pretrained_dict['state_dict']    
@@ -335,7 +335,7 @@ def checkpoint(epoch):
     torch.save(netG, net_g_model_out_path)
     print("Checkpoint saved to {}".format("checkpoint" + opt.dataset))
 
-save_path = '/mnt/hdd3/pytorch-hand/save'
+save_path = 'save' # you can change to your own save path
 if not os.path.exists(save_path):
     os.makedirs(save_path)
     
