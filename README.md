@@ -24,12 +24,17 @@ We use several different datasets for model adaptation (or domain adaptation), i
 
 ### Pre-trained model
 You can download the hand segmentation model (bayes_rf101_egtea_00040.pth.tar) pre-trained on EGTEA dataset from [BaiduDrive](https://pan.baidu.com/s/1DNFK_kFZc_Z0nQhOliCK0w) code: rvch  
-Please put the model inside the filefolder according to the filepath of the code.
+Please put the model inside the filefolder according to the filepath of the code.  
+To generate the pre-trained model for yourself, after preparing the source domain data (EGTEA dataset), run
+```
+python train.py --dataset name_of_source_dataset --batchSize your_batchsize_for_training
+```
+You can also find the source domain data from the above BaiduDrive.
 
 ### Running the code
 To run the complete experiment, after preparing the data, run
 ```
-python train_bayesian_adapt.py --dataset name_of_target_dataset --batchSize number_of_batchsize_for_adaptation
+python train_bayesian_adapt.py --dataset name_of_target_dataset --batchSize your_batchsize_for_adaptation
 ```
 This would adapt the pre-trained segmentation model to the target dataset.
 
