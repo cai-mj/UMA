@@ -309,6 +309,7 @@ def test_update_1(imgDir, maskDir, saveDir):
     apply a hand segmentation model to a directory
     generate prediction map for next round of training
     no use of average prediction from multiple dropout
+    so the prediction is fixed for the same input
     """
     iou = AverageMeter()
     f1 = AverageMeter()
@@ -355,7 +356,7 @@ def test_update_1(imgDir, maskDir, saveDir):
             precision = np.count_nonzero(intersection)*1.0/(P+0.00001)
             f1.update(2*recall*precision/(recall+precision+0.00001), 1)
         
-        # save mean prediction, uncertainty map and original image
+        # save deterministic prediction, segmentation map
         predict = cv2.resize(predict, img_size, interpolation = cv2.INTER_CUBIC)
         cv2.imwrite("%s/%s_p.png" % (saveDir, filename[:-4]), predict)  
         predict_seg = cv2.resize(predict_seg, img_size, interpolation = cv2.INTER_CUBIC)
